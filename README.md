@@ -1,6 +1,6 @@
 # Stacks
 
-![Stack Logo](assets/favicon/logo-large.png)
+![Stack Logo](assets/images/stacks-logo.png)
 
 A lofi album art visualizer for sonos
 
