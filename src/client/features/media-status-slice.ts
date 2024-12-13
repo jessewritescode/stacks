@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { IMediaStatus as IMediaStatusDTO } from '@shared/media-status';
-import { TrackStatus } from '@shared/track-status';
+import { ITrackStatus } from '@shared/track-status';
 
 // Initial state matching MediaStatusDTO with an additional loading and error state
 interface IMediaStatusState extends IMediaStatusDTO {}
