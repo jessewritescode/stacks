@@ -16,4 +16,6 @@ const { version: VERSION } = PackageJson;
 // server
 const SERVER_PORT = process.env.PORT || 3000;
 
-export { IS_DEV, VERSION, SERVER_PORT };
+const SONOS_HOST = process.env.SONOS_HOST || '';
+
+export { IS_DEV, VERSION, SERVER_PORT, SONOS_HOST };

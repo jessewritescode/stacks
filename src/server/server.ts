@@ -3,6 +3,7 @@ import path from 'path';
 import { pagesRouter } from './routes/pages-router';
 import { staticsRouter } from './routes/statics-router';
 import { apiRouter } from './routes/api-router';
+import { imageProxyRouter } from './routes/image-proxy-router';
 import * as config from './config';
 
 console.log(`*******************************************`);
@@ -14,6 +15,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.use(apiRouter());
+app.use(imageProxyRouter());
 app.use('/assets', express.static(path.join(process.cwd(), 'assets')));
 app.use(staticsRouter());
 app.use(pagesRouter());
