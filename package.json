@@ -6,7 +6,7 @@
     "node": ">18"
   },
   "scripts": {
-    "clean": "rimraf dist",
+    "clean": "node_modules/.bin/rimraf dist",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "start": "node index.js",
     "start:prod": "cross-env NODE_ENV=production node index.js",
@@ -19,7 +19,6 @@
     "dev-server": "tsc-watch --noClear -b ./src/server/tsconfig.json --onSuccess \"yarn start-dev-server\"",
     "dev": "concurrently --prefix \"[{name}]\" --names \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev-server\" \"npm run dev-client\"",
     "build": "yarn clean && concurrently --prefix \"[{name}]\" --names \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run build-server\" \"npm run build-client\"",
-    "rimraf": "./node_modules/rimraf/bin.js"
   },
   "keywords": [
     "typescript",
