@@ -2,6 +2,9 @@ FROM node:20-alpine
 
 WORKDIR /app
 
+# Install global dependencies
+RUN yarn global add rimraf
+
 # Install dependencies
 COPY package.json yarn.lock ./
 RUN yarn install --production
